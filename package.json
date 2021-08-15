@@ -1,0 +1,35 @@
+{
+  "name": "sarcoline",
+  "version": "0.0.1",
+  "description": "Data Structures of TypeScript/JavaScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha -r ts-node src/Tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alensaito1/sarcoline.git"
+  },
+  "keywords": [
+    "data-structures",
+    "cs",
+    "heap",
+    "binary-tree",
+    "linked-list"
+  ],
+  "author": "Alen Yohannan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alensaito1/sarcoline/issues"
+  },
+  "homepage": "https://github.com/alensaito1/sarcoline#readme",
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "mocha": "^9.0.3",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  }
+}
