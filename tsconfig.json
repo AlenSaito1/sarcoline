@@ -17,9 +17,9 @@
     },
     "include": [
       "src/**/*"
-    ],
+, "Structures"    ],
     "exclude": [
       "node_modules",
-      "src/Test/**/*"
+      "Test/**/*"
     ]
 }
