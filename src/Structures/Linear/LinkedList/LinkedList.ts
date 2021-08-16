@@ -109,6 +109,7 @@ export class LinkedList<T> implements Iterable<T> {
             const node = this.list.head
             if (node.next) node.next.prev = null
             this.list.head = node.next as LinkedListNode<T>
+            if (!node) return
             this.list.size -= 1
             return node.value
         }
@@ -117,10 +118,11 @@ export class LinkedList<T> implements Iterable<T> {
     removeBack = (): T | undefined => {
         if (this.list) {
             const node = this.list.tail
-            if (node.prev) node.prev.next = null
-            this.list.tail = node.prev as LinkedListNode<T>
+            if (node?.prev) node.prev.next = null
+            this.list.tail = (node?.prev || null) as LinkedListNode<T>
+            if (!node) return
             this.list.size -= 1
-            return node.value
+            return node?.value
         }
     }
 
@@ -134,6 +136,7 @@ export class LinkedList<T> implements Iterable<T> {
             current = current.next as LinkedListNode<T>
             i += 1
         }
+        if (!current) return
         if (current.next) current.next.prev = current.prev
         if (current.prev) current.prev.next = current.next
         if (this.list) this.list.size -= 1
