@@ -104,27 +104,27 @@ export class LinkedList<T> implements Iterable<T> {
 
     has = (item: T): boolean => this.indexOf(item) !== -1
 
-    removeFront = (): LinkedList<T> => {
+    removeFront = (): T | undefined => {
         if (this.list) {
             const node = this.list.head
             if (node.next) node.next.prev = null
             this.list.head = node.next as LinkedListNode<T>
             this.list.size -= 1
+            return node.value
         }
-        return this
     }
 
-    removeBack = (): LinkedList<T> => {
+    removeBack = (): T | undefined => {
         if (this.list) {
             const node = this.list.tail
             if (node.prev) node.prev.next = null
             this.list.tail = node.prev as LinkedListNode<T>
             this.list.size -= 1
+            return node.value
         }
-        return this
     }
 
-    removeAt = (index: number): LinkedList<T> => {
+    removeAt = (index: number): T | undefined => {
         if (index < 0 || index > this.size - 1) throw new Error(`Index out of bounds: ${index}`)
         if (index === 0) return this.removeFront()
         if (index === this.size - 1) return this.removeBack()
@@ -137,7 +137,6 @@ export class LinkedList<T> implements Iterable<T> {
         if (current.next) current.next.prev = current.prev
         if (current.prev) current.prev.next = current.next
         if (this.list) this.list.size -= 1
-        return this
     }
 
     static from = <T>(array: ArrayLike<T>): LinkedList<T> => {
