@@ -9,7 +9,7 @@
     "lint": "eslint \"src/**/*.ts\"",
     "prepare": "npm run build",
     "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
-    "test": "mocha -r ts-node/register src/Tests/**/*.test.ts"
+    "test": "mocha -r ts-node/register \"Tests/**/*.test.ts\""
   },
   "repository": {
     "type": "git",
