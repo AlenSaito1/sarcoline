@@ -1,5 +1,5 @@
-import { defaultEqualsFunction, EqualsFunction } from '../../../utils'
-import { LinkedList } from '../LinkedList'
+import { defaultEqualsFunction, EqualsFunction } from './../../utils'
+import { LinkedList } from './LinkedList'
 
 export class Stack<T> implements Iterable<T> {
     list: LinkedList<T>
