@@ -2,9 +2,7 @@ import { strict as assert } from 'assert'
 import { Stack } from '../../src/Structures'
 
 describe('Stack', () => {
-
     describe('Empty Stacks', () => {
-    
         it('should be empty', () => {
             const stack = new Stack()
             assert.equal(stack.isEmpty(), true)
@@ -22,11 +20,9 @@ describe('Stack', () => {
                 assert.fail()
             }
         })
-
     })
 
     describe('adding', () => {
-
         it('should add items', () => {
             const stack = new Stack<number>()
             stack.push(1)
@@ -44,11 +40,9 @@ describe('Stack', () => {
             stack.push(3)
             assert.equal(stack.peek(), 3)
         })
-
     })
 
     describe('removing', () => {
-
         it('should remove items', () => {
             const stack = new Stack<number>()
             stack.push(1)
@@ -64,11 +58,9 @@ describe('Stack', () => {
             assert.equal(stack.pop(), undefined)
             assert.equal(stack.size, 0)
         })
-
     })
 
     describe('peeking', () => {
-
         it('should peek at the top item', () => {
             const stack = new Stack<number>()
             stack.push(1)
@@ -86,7 +78,6 @@ describe('Stack', () => {
             stack.push(3)
             assert.equal(stack.peek(), 3)
         })
-
     })
 
     describe('iterating', () => {
@@ -103,5 +94,4 @@ describe('Stack', () => {
             assert.strictEqual(count, 3)
         })
     })
-
 })
