@@ -72,11 +72,11 @@ export class LinkedList<T> implements Iterable<T> {
         return this
     }
 
-    peakFront = (): T | undefined => {
+    peekFront = (): T | undefined => {
         return this.list?.head.value
     }
 
-    peakBack = (): T | undefined => {
+    peekBack = (): T | undefined => {
         return this.list?.tail.value
     }
 

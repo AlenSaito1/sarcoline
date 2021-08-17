@@ -19,7 +19,7 @@ export class Stack<T> implements Iterable<T> {
 
     pop = (): T | undefined => this.list.removeBack()
 
-    peek = (): T | undefined => this.list.peakBack()
+    peek = (): T | undefined => this.list.peekBack()
 
     isEmpty = (): boolean => this.list.size === 0;
 

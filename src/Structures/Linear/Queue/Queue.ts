@@ -18,9 +18,9 @@ export class Queue<T> implements Iterable<T> {
 
     dequeue = (): T | undefined => this.list.removeBack()
 
-    peekFront = (): T | undefined => this.list.peakFront()
+    peekFront = (): T | undefined => this.list.peekFront()
 
-    peekBack = (): T | undefined => this.list.peakBack()
+    peekBack = (): T | undefined => this.list.peekBack()
 
     has = (item: T): boolean => this.list.has(item);
 
